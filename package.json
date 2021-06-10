@@ -1,0 +1,24 @@
+{
+  "name": "lets-get-tropical",
+  "version": "1.0.0",
+  "description": "An app to identify the occupancy of near by beaches in Barcelona area.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamuribe/lets-get-tropical.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamuribe/lets-get-tropical/issues"
+  },
+  "homepage": "https://github.com/jamuribe/lets-get-tropical#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
