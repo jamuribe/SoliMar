@@ -1,4 +1,4 @@
-import data from '.../expo-shared/data.json';
+import data from '../data.json';
 
 const getData = () => {
   const info = data;
