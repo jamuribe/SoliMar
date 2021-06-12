@@ -5,88 +5,88 @@
     "airTemp" : "30",
     "UVRadiation": "4",
     "maxTemp": "28",
-    "minTemp": "23",
-    "beaches": [
-      {
-        "name": "Sant Sebastià",
-        "waterQuality": "1",
-        "jellyfish": "1",
-        "seaState": "1",
-        "occupancy": "2",
-        "url": ""
-      },
-      {
-        "name": "Sant Miquel",
-        "waterQuality": "1",
-        "jellyfish": "2",
-        "seaState": "2",
-        "occupancy": "1",
-        "url": ""
-      },
-      {
-        "name": "Barceloneta",
-        "waterQuality": "1",
-        "jellyfish": "1",
-        "seaState": "3",
-        "occupancy": "2",
-        "url": ""
-      },
-      {
-        "name": "Somorrostro<",
-        "waterQuality": "1",
-        "jellyfish": "2",
-        "seaState": "1",
-        "occupancy": "3",
-        "url": ""
-      },
-      {
-        "name": "Nova Icària",
-        "waterQuality": "1",
-        "jellyfish": "1",
-        "seaState": "1",
-        "occupancy": "2",
-        "url": ""
-      },
-      {
-        "name": "Bogatell",
-        "waterQuality": "1",
-        "jellyfish": "1",
-        "seaState": "1",
-        "occupancy": "2",
-        "url": ""
-      },
-      {
-        "name": "Mar Bella",
-        "waterQuality": "1",
-        "jellyfish": "2",
-        "seaState": "1",
-        "occupancy": "4",
-        "url": ""
-      },
-      {
-        "name": "Nova Mar Bella",
-        "waterQuality": "2",
-        "jellyfish": "1",
-        "seaState": "1",
-        "occupancy": "1",
-        "url": ""
-      },
-      {
-        "name": "Llevant",
-        "waterQuality": "1",
-        "jellyfish": "2",
-        "seaState": "1",
-        "occupancy": "2",
-        "url": ""
-      },
-      {
-        "name": "Zona Banys Forum",
-        "waterQuality": "3",
-        "jellyfish": "1",
-        "seaState": "2",
-        "occupancy": "3",
-        "url": ""
-      }
-    ]
-  }
+    "minTemp": "23"
+  },
+  "beaches": [
+    {
+      "name": "Sant Sebastià",
+      "waterQuality": "1",
+      "jellyfish": "1",
+      "seaState": "1",
+      "occupancy": "2",
+      "url": ""
+    },
+    {
+      "name": "Sant Miquel",
+      "waterQuality": "1",
+      "jellyfish": "2",
+      "seaState": "2",
+      "occupancy": "1",
+      "url": ""
+    },
+    {
+      "name": "Barceloneta",
+      "waterQuality": "1",
+      "jellyfish": "1",
+      "seaState": "3",
+      "occupancy": "2",
+      "url": ""
+    },
+    {
+      "name": "Somorrostro<",
+      "waterQuality": "1",
+      "jellyfish": "2",
+      "seaState": "1",
+      "occupancy": "3",
+      "url": ""
+    },
+    {
+      "name": "Nova Icària",
+      "waterQuality": "1",
+      "jellyfish": "1",
+      "seaState": "1",
+      "occupancy": "2",
+      "url": ""
+    },
+    {
+      "name": "Bogatell",
+      "waterQuality": "1",
+      "jellyfish": "1",
+      "seaState": "1",
+      "occupancy": "2",
+      "url": ""
+    },
+    {
+      "name": "Mar Bella",
+      "waterQuality": "1",
+      "jellyfish": "2",
+      "seaState": "1",
+      "occupancy": "4",
+      "url": ""
+    },
+    {
+      "name": "Nova Mar Bella",
+      "waterQuality": "2",
+      "jellyfish": "1",
+      "seaState": "1",
+      "occupancy": "1",
+      "url": ""
+    },
+    {
+      "name": "Llevant",
+      "waterQuality": "1",
+      "jellyfish": "2",
+      "seaState": "1",
+      "occupancy": "2",
+      "url": ""
+    },
+    {
+      "name": "Zona Banys Forum",
+      "waterQuality": "3",
+      "jellyfish": "1",
+      "seaState": "2",
+      "occupancy": "3",
+      "url": ""
+    }
+  ]
 }
