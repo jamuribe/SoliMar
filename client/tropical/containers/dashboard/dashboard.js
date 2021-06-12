@@ -1,10 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { useState, useEffect } from 'react';
-import  getData  from '../../sevices/apiServices';
 import { useHistory } from "react-router-native";
 
-export default function dashboard() {
+export default function dashboard({data}) {
 
   let history = useHistory();
 
@@ -12,25 +10,20 @@ export default function dashboard() {
     history.push('/beach');
   };
 
-  const [info, setInfo] = useState([]);
+  if (data.beaches !== undefined) {
 
-  useEffect(() => {
-    getAll();
-  }, [])
+    return (
+      <View style={styles.dashBcontainer}>
+        {/* <Button title='hi' onPress={handleClick} /> */}
 
-  const getAll = () => {
-    const data = getData();
-    setInfo(data);
-  }
+        <Text>This is the Dashboard</Text>
+        {
+          data.beaches.map(beach => <Button title={beach.name} onPress={handleClick}/>)
+        }
+      </View>
+    )
+  } else return null;
 
-  return (
-    <View style={styles.dashBcontainer}>
-      <Button title='hi' onPress={handleClick} />
-
-      <Text>This is the Dashboard</Text>
-
-    </View>
-  )
 }
 
 const styles = StyleSheet.create({
