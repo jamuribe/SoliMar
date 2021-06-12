@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/jamuribe/lets-get-tropical#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-xml-bodyparser": "^0.3.0",
+    "mongoose": "^5.12.13",
+    "xml-js": "^1.6.11"
   }
 }
