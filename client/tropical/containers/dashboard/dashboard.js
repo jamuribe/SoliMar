@@ -1,29 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { useHistory } from "react-router-native";
+// import BeachInfo from '../../components/beachInfo/beachInfo';
 
-export default function dashboard({data}) {
 
-  let history = useHistory();
+export default function dashboard({navigation}) {
+  // let history = useHistory();
+  // const handleClick = (name) => {
+  //   name && history.push('/beach');
+  // };
 
-  const handleClick = () => {
-    history.push('/beach');
-  };
-
-  if (data.beaches !== undefined) {
-
+  // if (data.beaches !== undefined) {
     return (
       <View style={styles.dashBcontainer}>
-        {/* <Button title='hi' onPress={handleClick} /> */}
-
         <Text>This is the Dashboard</Text>
-        {
-          data.beaches.map(beach => <Button title={beach.name} onPress={handleClick}/>)
-        }
+        <Button title='Beach' onPress={() => navigation.navigate('Beach')} />
+        {/* {
+          data.beaches.map(beach => <Button  infoBeach={beach} title={beach.name} onPress={() => handleClick(beach.name)}/>)
+        } */}
       </View>
     )
-  } else return null;
-
+  // } else return null;
 }
 
 const styles = StyleSheet.create({
