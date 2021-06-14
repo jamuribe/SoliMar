@@ -1,16 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
-export default function beachInfo({navigation}) {
+export default function beachInfo({navigation, data, route}) {
 
   const mockInfo = {
-      "name": "Sant Sebastià",
-      "waterQuality": "1",
-      "jellyfish": "1",
-      "seaState": "1",
-      "occupancy": "2",
-      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftravelblogstories.com%2Fwp-content%2Fuploads%2F2018%2F12%2Fsan_sebastian_beach.jpg&f=1&nofb=1"
-    };
+    "name": "Sant Sebastià",
+    "waterQuality": "1",
+    "jellyfish": "1",
+    "seaState": "1",
+    "occupancy": "2",
+    "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftravelblogstories.com%2Fwp-content%2Fuploads%2F2018%2F12%2Fsan_sebastian_beach.jpg&f=1&nofb=1"
+  };
+
+  const params = route.params;
 
   return (
     <View style={styles.beachContainer}>
@@ -19,6 +21,7 @@ export default function beachInfo({navigation}) {
         {mockInfo.name}
       </Text>
       <Image source={{uri:mockInfo.url}} style={{ width: 305, height: 159 }} />
+      <Text>Occupancy: {mockInfo.occupancy}</Text>
     </View>
   )
 }
