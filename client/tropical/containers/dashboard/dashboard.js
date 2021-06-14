@@ -1,30 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { useHistory } from "react-router-native";
-// import BeachInfo from '../../components/beachInfo/beachInfo';
-
+import  getData  from '../../sevices/apiServices';
 
 export default function dashboard({navigation}) {
-  // let history = useHistory();
-  // const handleClick = (name) => {
-  //   name && history.push('/beach');
-  // };
 
-  // if (data.beaches !== undefined) {
+  const [info, setInfo] = useState([]);
+  useEffect(() => {
+    getAll();
+  }, [])
+
+  const getAll = () => {
+    const data = getData();
+    setInfo(data);
+  }
+
+  if (info.beaches !== undefined) {
     return (
       <View style={styles.dashBcontainer}>
         <Text>This is the Dashboard</Text>
-        <Button title='Beach' onPress={() => navigation.navigate('Beach')} />
-        {/* {
-          data.beaches.map(beach => <Button  infoBeach={beach} title={beach.name} onPress={() => handleClick(beach.name)}/>)
-        } */}
+        {
+          info.beaches.map(beach => <Button title={beach.name} onPress={() => navigation.navigate('Beach', {data:beach})} />)
+        }
       </View>
     )
-  // } else return null;
-}
+    } else return null;
+  }
 
-const styles = StyleSheet.create({
-  dashBContainer: {
+  const styles = StyleSheet.create({
+    dashBContainer: {
     flex: 1,
     width: '100%',
     backgroundColor: 'black',
