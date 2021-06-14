@@ -43,6 +43,7 @@ const Progress = ({step, steps, height}) => {
           backgroundColor: 'rgba(0,0,0,0.1)',
           borderRadius: height,
           overflow: 'hidden',
+          // width: '100%'
         }}
       >
         <Animated.View
@@ -68,20 +69,20 @@ const Progress = ({step, steps, height}) => {
   )
 }
 
-export default function progressBar() {
+export default function progressBar({step}) {
   return (
     <View style={styles.container}>
       <StatusBar hidden />
-      <Progress step={2} steps={4} height={20} />
+      <Progress step={step} steps={4} height={20} />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
+    // flex: 2,
+    // backgroundColor: '#fff',
+    // justifyContent: 'center',
     padding: 20,
   }
 })
