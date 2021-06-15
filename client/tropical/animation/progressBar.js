@@ -80,9 +80,9 @@ export default function progressBar({step}) {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 2,
+    flex: 2,
     // backgroundColor: '#fff',
-    // justifyContent: 'center',
-    padding: 20,
+    justifyContent: 'center',
+    padding: 5,
   }
 })

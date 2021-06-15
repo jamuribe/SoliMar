@@ -65,10 +65,10 @@ export default function dashboard() {
           scrollEventThrottle={32}
           ref={slidesRef}
         />
-      </View>
-      <View style={{}}>
-        <Paginator data={beaches} scrollX={scrollX} />
         {beaches.length ? <NextButton scrollTo={scrollTo} percentage={(currentIndex + 1) * (100 / beaches.length)}/> : null}
+      </View>
+      <View style={{backgroundColor:'pink'}}>
+        <Paginator data={beaches} scrollX={scrollX} />
       </View>
 
 
@@ -77,15 +77,15 @@ export default function dashboard() {
 }
 const styles = StyleSheet.create({
   dashBContainer: {
-    flex: 3,
+    flex: 2,
     width: '100%',
-    height: '55%',
+    height: '50%',
     backgroundColor: 'white',
-    borderColor: 'black',
-    borderStyle: 'solid',
-    marginTop: '10%',
+    // borderColor: 'black',
+    // borderStyle: 'solid',
+    // marginTop: '10%',
     // padding: '10%',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent:'center',
   },
 })

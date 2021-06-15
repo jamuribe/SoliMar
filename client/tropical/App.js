@@ -18,9 +18,9 @@ export default function App() {
     <>
       <NavigationContainer >
         <Stack.Navigator
-          // screenOptions={{
-          //   headerShown: false
-          // }}
+          screenOptions={{
+            headerShown: false
+          }}
         >
           <Stack.Screen
             options={{
