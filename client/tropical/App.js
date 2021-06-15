@@ -7,7 +7,7 @@ import BeachInfo from './components/beachInfo/beachInfo';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-
+import data from './data.json';
 
 enableScreens();
 const Stack = createNativeStackNavigator();
@@ -15,19 +15,36 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
   return (
+    <>
       <NavigationContainer >
-        <Stack.Navigator >
+        <Stack.Navigator
+          // screenOptions={{
+          //   headerShown: false
+          // }}
+        >
           <Stack.Screen
+            options={{
+              headerStyle: {
+                backgroundColor: '#0D3B66',
+             }}}
             name="Home"
             component={Dashboard}
           />
           <Stack.Screen
-            options={{ headerLargeTitle: true }}
+            options={{
+              headerStyle: {
+                backgroundColor: '#0D3B66',
+             }}}
             name="Beach"
             component={BeachInfo}
           />
         </Stack.Navigator>
       </NavigationContainer>
+
+      <View>
+        {/* <Button Component here/> */}
+      </View>
+    </>
   );
 }
 
