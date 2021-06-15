@@ -7,7 +7,7 @@ export default function imgSwipe({ item}) {
   const navigation = useNavigation();
   const { width } = useWindowDimensions();
   return (
-    <TouchableOpacity onPress={() => navigation.navigate({routeName:'Beach'}, {data:item})} >
+    <TouchableOpacity onPress={() => navigation.navigate('Beach', {data:item})} >
       <View style={[styles.Navcontainer, { width }]}>
         <View style={{margin: '5%'}}>
           <Image source={{uri:item.url}} style={styles.image,{ height:400, resizeMode: 'contain'}}/>
