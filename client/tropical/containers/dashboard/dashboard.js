@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image, FlatList} from 'react-native';
+import React, { useEffect, useState, useRef } from 'react';
+import { StyleSheet, Text, View, Button, TouchableOpacity, Image, FlatList, Animated} from 'react-native';
 import  getData  from '../../sevices/apiServices';
 import ImgSwipe from '../../components/imageSwipe/imgSwipe';
+import info from '../../data.json';
+import Paginator from '../../animation/paginator';
+import NextButton from '../../animation/nextButton';
 
-
-export default function dashboard({navigation}) {
-
+export default function dashboard() {
   const [beaches, setBeach] = useState([]);
+
+
   useEffect(() => {
     getAll();
   }, [])
@@ -15,46 +18,74 @@ export default function dashboard({navigation}) {
     const data = getData();
     setBeach(data.beaches);
   }
-  // console.log(beaches[0], ' aqui');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const scrollX = useRef(new Animated.Value(0)).current;
+  const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
+
+  const slidesRef = useRef(null);
 
 
+  const viewableItemsChanged = useRef(({ viewableItems }) => {
+    // console.log(viewableItems)
+    setCurrentIndex(viewableItems[0].index)
+  }).current;
+
+  const scrollTo = () => {
+    if (currentIndex < beaches.length -1) {
+      slidesRef.current.scrollToIndex({ index: currentIndex + 1})
+    } else {
+      console.log('last')
+    }
+  }
   return (
-    <View style={styles.dashBContainer}>
-      <FlatList
-        horizontal
-        data={beaches}
-        renderItem={({item}) => <ImgSwipe item={item} />} />
-    </View>
-  )
+    <>
+      {/* <View>
+        <Text> Water temperature: {info.metInfo.waterTemp} </Text>
+        <Text> Air temperature: {info.metInfo.airTemp} </Text>
+        <Text> Ultra violet index: {info.metInfo.UVRadiation} </Text>
+        <Text> Min temperature: {info.metInfo.maxTemp} </Text>
+        <Text> Max temperature: {info.metInfo.minTemp} </Text>
+      </View> */}
+      <View style={styles.dashBContainer}>
+        <FlatList
+          horizontal
+          data={beaches}
+          renderItem={({item}) => <ImgSwipe item={item} />}
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+          bounces={false}
+          keyExtractor={(item) => item.name} // => FIX ID
+          onScroll={Animated.event([{ nativeEvent: {contentOffset: { x: scrollX }}}], {
+             useNativeDriver: false,
+          })}
 
-  // return (
-  //   <View style={styles.dashBContainer}>
-  //     <Text style={{color: 'white'}} >This is the Dashboard</Text>
-  //     {
-  //       beaches.map(beach => (<FlatList  horizontal='true' >
-  //           <TouchableOpacity onPress={() => navigation.navigate('Beach', {data:beach})} >
-  //             <View style={{ flex: 0.3}}>
-  //               <Image source={{uri:beach.url}} />
-  //               <Text> title={beach.name} </Text>
-  //             </View>
-  //           </TouchableOpacity>
-  //         </FlatList>)
-  //     )
-  //     }
-  //   </View>
-  // )
+          onViewableItemsChanged={ viewableItemsChanged }
+          viewabilityConfig={viewConfig}
+          scrollEventThrottle={32}
+          ref={slidesRef}
+        />
+      </View>
+      <View style={{}}>
+        <Paginator data={beaches} scrollX={scrollX} />
+        {beaches.length ? <NextButton scrollTo={scrollTo} percentage={(currentIndex + 1) * (100 / beaches.length)}/> : null}
+      </View>
+
+
+    </>
+  )
 }
 const styles = StyleSheet.create({
   dashBContainer: {
-    // flex: 2,
+    flex: 3,
     width: '100%',
-    height: '100%',
-    backgroundColor: 'black',
+    height: '55%',
+    backgroundColor: 'white',
+    borderColor: 'black',
+    borderStyle: 'solid',
+    marginTop: '10%',
+    // padding: '10%',
     alignItems: 'center',
     justifyContent: 'center',
-
   },
-
 })
-
-/*<Button color='red' title={beach.name} onPress={() => navigation.navigate('Beach', {data:beach})} />)*/
