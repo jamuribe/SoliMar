@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99e3bf5f-7673-4a9c-8ae4-b11d2cc9ca7b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1u0R1a9ahSu09m7eEyPjklQwZ9g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="tropical" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99e3bf5f-7673-4a9c-8ae4-b11d2cc9ca7b" name="Default Changelist" comment="" />
+      <created>1623800305838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623800305838</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2097" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623800986433">
+      <screen x="1920" y="312" width="1366" height="768" />
+    </state>
+    <state x="2097" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.312.1366.768/72.339.1848.741@1920.312.1366.768" timestamp="1623800986433" />
+    <state x="2082" y="497" width="1094" height="528" key="AVDManager" timestamp="1623801010524">
+      <screen x="1920" y="312" width="1366" height="768" />
+    </state>
+    <state x="2082" y="497" width="1094" height="528" key="AVDManager/1920.312.1366.768/72.339.1848.741@1920.312.1366.768" timestamp="1623801010524" />
+    <state x="2303" y="327" key="run.anything.popup" timestamp="1623800932762">
+      <screen x="1920" y="312" width="1366" height="768" />
+    </state>
+    <state x="2303" y="327" key="run.anything.popup/1920.312.1366.768/72.339.1848.741@1920.312.1366.768" timestamp="1623800932762" />
+  </component>
+</project>
