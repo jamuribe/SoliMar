@@ -1,8 +1,35 @@
 <a href="https://www.fontspace.com/category/pretty"><img src="https://see.fontimg.com/api/renderfont4/RDvM/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMUQ1Nzc1IiwiYmdjIjoiI0UzRjlGOSIsInQiOjF9/U29saU1hcg/cinderela-personal-use-regular.png" alt="Pretty fonts"></a>
 
 Due to last year's recent events; public places occupancy has become an important factor when it comes to socializing for some indivduals.
-And beaches are no different. 
-SoliMar is a weather app specialized in forcasting the temperature and sea conditions in the Barcelona metropolitan area. 
+And beaches are no different.
+SoliMar is a weather app specialized in forcasting the temperature and sea conditions in the Barcelona metropolitan area.
+</br>
+
+## Installation
+
+Fork & clone this repo.
+
+Run `npm install` from root folder, to install all server depencencies.
+```bash
+  npm i
+```
+Then, run `npm install` from clien/SoliMar, to install all client depencencies. And run `expo start` or `npm start` from the same directory.
+```bash
+  npm i
+
+  expo start | npm start
+```
+Android Simulator:
+
+- Download an android simulator (like [this one](https://developer.android.com/studio))
+- Run `a` into the CLI
+
+On your android device
+
+- Install '[Expo Client](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_GB)' from the google playstore
+- Open expo on your phone
+- Scan the QR code in the CLI
+
 </br>
 
 ## Tech Stack
