@@ -11,7 +11,7 @@ const router = require('./router');
 
 app.use(express.json());
 app.use(router);
-//test
+
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`); // eslint-disable-line no-console
 });
