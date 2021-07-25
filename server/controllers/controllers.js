@@ -1,8 +1,11 @@
-const meteoCondition = require('../scraper/scraper.js')
-const BeachState = require('../models/scheme');
+const state = require('../scraper/scraper.js')
 
 const getData = async (req, res) => {
-  res.send({ meteoCondition })
+  try {
+    res.send({ state })
+  } catch (err) {
+    console.log('Error :', err);
+  }
 }
 
 module.exports = getData;
