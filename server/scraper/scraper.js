@@ -2,9 +2,10 @@ const request = require('request');
 const cheerio = require('cheerio');
 
 const apiUrl = 'https://www.barcelona.cat/sites/all/static/platges/clabsa/estatactualplatges.xml';
-const state = {};
 
-request(apiUrl, (error, response, data) => {
+
+const state = {};
+const requ = request(apiUrl, (error, response, data) => {
   if (!error && response.statusCode === 200) {
 
     const $ = cheerio.load(data, {
@@ -27,9 +28,10 @@ request(apiUrl, (error, response, data) => {
       state.maxTemp = $(el).children('temperaturaMaxima').text()
       state.minTemp = $(el).children('temperaturaMinima').text()
     })
-
+    state['beaches'] = [];
     $('Platja').each((index, el) => {
-      state[beachName = $(el).children('nomPlatja').text()] = {
+      const beach = {
+        name: $(el).children('nomPlatja').text(),
         flagColor: $(el).children('estatBandera').text(),
         waterQuality: $(el).children('qualitatAigua').text(),
         jellyfish: $(el).children('Meduses').text(),
@@ -37,6 +39,7 @@ request(apiUrl, (error, response, data) => {
         swimmAllowed: $(el).children('permisBany').text(),
         crowd: $(el).children('ocupacio').text()
       }
+      state.beaches.push(beach)
     });
   }
 })
