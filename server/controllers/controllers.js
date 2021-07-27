@@ -1,11 +1,11 @@
-const state = require('../scraper/scraper.js')
+const state = require('../scraper/scraper.js');
 
 const getData = async (req, res) => {
   try {
-    res.send({ state })
+    res.send({ state });
   } catch (err) {
     console.log('Error :', err);
   }
-}
+};
 
 module.exports = getData;

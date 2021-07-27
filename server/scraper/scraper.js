@@ -3,11 +3,9 @@ const cheerio = require('cheerio');
 
 const apiUrl = 'https://www.barcelona.cat/sites/all/static/platges/clabsa/estatactualplatges.xml';
 
-
 const state = {};
-const requ = request(apiUrl, (error, response, data) => {
+request(apiUrl, (error, response, data) => {
   if (!error && response.statusCode === 200) {
-
     const $ = cheerio.load(data, {
       xml: {
         withDomLvl1: true,
@@ -20,15 +18,15 @@ const requ = request(apiUrl, (error, response, data) => {
     state.lastActualization = $('dataActualitzacio').text();
 
     $('infoMET').each((index, el) => {
-      state.waterTemp = $(el).children('temperaturaAigua').text()
-      state.temp = $(el).children('temperaturaAmbient').text()
-      state.UVIndex = $(el).children('radiacioUltraviolada').text()
-      state.morning = $(el).children('previsioTempsMatiAvui').text()
-      state.afternoon = $(el).children('previsioTempsTardaAvui').text()
-      state.maxTemp = $(el).children('temperaturaMaxima').text()
-      state.minTemp = $(el).children('temperaturaMinima').text()
-    })
-    state['beaches'] = [];
+      state.waterTemp = $(el).children('temperaturaAigua').text();
+      state.temp = $(el).children('temperaturaAmbient').text();
+      state.UVIndex = $(el).children('radiacioUltraviolada').text();
+      state.morning = $(el).children('previsioTempsMatiAvui').text();
+      state.afternoon = $(el).children('previsioTempsTardaAvui').text();
+      state.maxTemp = $(el).children('temperaturaMaxima').text();
+      state.minTemp = $(el).children('temperaturaMinima').text();
+    });
+    state.beaches = [];
     $('Platja').each((index, el) => {
       const beach = {
         name: $(el).children('nomPlatja').text(),
@@ -38,10 +36,10 @@ const requ = request(apiUrl, (error, response, data) => {
         seaCondition: $(el).children('estatMar').text(),
         swimmAllowed: $(el).children('permisBany').text(),
         crowd: $(el).children('ocupacio').text()
-      }
-      state.beaches.push(beach)
+      };
+      state.beaches.push(beach);
     });
   }
-})
+});
 
 module.exports = state;
