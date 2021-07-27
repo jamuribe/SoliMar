@@ -15,7 +15,7 @@ export default function beachInfo({ navigation, route }) {
 
         <View style={{ backgroundColor: '#F4D35E', width: '90%', margin: '5%', height: '30%', padding: '2%' }}>
           <Text>Occupancy:  </Text>
-          <ProgressBar step={params.data.occupancy} />
+          <ProgressBar step={params.data.crowd} />
           <Text>Jellyfish: </Text>
           <ProgressBar step={params.data.jellyfish} />
           <Text>Quality of the water: </Text>
