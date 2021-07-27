@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5f739e6-4e49-436e-82aa-e471a68c615c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/tropical/.expo-shared/assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/animation/nextButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/animation/paginator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/animation/progressBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/assets/adaptive-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/assets/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/assets/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/assets/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/components/beachInfo/beachInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/components/imageSwipe/imgSwipe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/containers/dashboard/dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tropical/sevices/apiServices.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/SoliMar/containers/dashboard/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/SoliMar/containers/dashboard/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/SoliMar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/SoliMar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/SoliMar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/SoliMar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/SoliMar/sevices/apiServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/SoliMar/sevices/apiServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +40,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2092" y="439" width="1094" height="528" key="AVDManager" timestamp="1625913466463">
-      <screen x="1920" y="312" width="1366" height="768" />
+    <state x="1608" y="179" width="1538" height="743" key="AVDManager" timestamp="1627384491794">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
+    <state x="1608" y="179" width="1538" height="743" key="AVDManager/0.104.1366.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1627384491794" />
     <state x="2092" y="439" width="1094" height="528" key="AVDManager/1920.312.1366.768/0.339.1920.741@1920.312.1366.768" timestamp="1625913466463" />
   </component>
 </project>
