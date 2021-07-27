@@ -27,5 +27,8 @@
     "mongoose": "^5.12.13",
     "nodemon": "^2.0.12",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "semistandard": "^16.0.1"
   }
 }
