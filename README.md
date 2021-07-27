@@ -38,6 +38,7 @@ On your android device
 
 **Server:** Node, Express, MongoDB, Mongoose
 
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
 [![NPM](https://img.shields.io/badge/NPM--red?style=flat&logo=npm)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![NPM](https://img.shields.io/badge/REACT-Native-blue?style=flat&logo=react)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![NPM](https://img.shields.io/badge/Expo--blue?style=flat&logo=expo)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
