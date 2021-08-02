@@ -1,58 +1,36 @@
-import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Platform, StatusBar} from 'react-native';
-import { enableScreens } from 'react-native-screens';
+import React, { useState, useEffect } from 'react';
+import { Image, StyleSheet } from 'react-native';
+import Main from './containers/main/main';
 
-import Dashboard from './containers/dashboard/dashboard';
-import BeachInfo from './components/beachInfo/beachInfo';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-import data from './data.json';
-
-enableScreens();
-const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
+
 
   return (
     <>
-      <NavigationContainer >
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false
-          }}
-        >
-          <Stack.Screen
-            options={{
-              headerStyle: {
-                backgroundColor: '#0D3B66',
-             }}}
-            name="Home"
-            component={Dashboard}
-          />
-          <Stack.Screen
-            options={{
-              headerStyle: {
-                backgroundColor: '#0D3B66',
-             }}}
-            name="Beach"
-            component={BeachInfo}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-
-      <View>
-        {/* <Button Component here/> */}
-      </View>
+      {
+        loading ?
+          <Image source={require('./assets/solimst.png')} style={styles.image} />
+          :
+          <Main />
+      }
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    backgroundColor: '#FAF0CA',
-    justifyContent: 'center',
-    paddingTop: Platform.OS === 'android'? StatusBar.currentHeight : 0
-  },
+  image: {
+    display: 'flex',
+    alignSelf: 'center',
+    backgroundColor: '#ffffff',
+    top: '30%'
+  }
 });
